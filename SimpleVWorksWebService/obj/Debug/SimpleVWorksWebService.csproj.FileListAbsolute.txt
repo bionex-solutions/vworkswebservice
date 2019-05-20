@@ -1,0 +1,12 @@
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\SimpleVWorksWebService.exe.config
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\SimpleVWorksWebService.exe
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\SimpleVWorksWebService.pdb
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\obj\Debug\SimpleVWorksWebService.csprojResolveAssemblyReference.cache
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\obj\Debug\SimpleVWorksWebService.exe
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\obj\Debug\SimpleVWorksWebService.pdb
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\obj\Debug\Interop.VWorks4Lib.dll
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\obj\Debug\SimpleVWorksWebService.csproj.ResolveComReference.cache
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\Newtonsoft.Json.dll
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\Newtonsoft.Json.xml
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\INIFileParser.dll
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\INIFileParser.xml
