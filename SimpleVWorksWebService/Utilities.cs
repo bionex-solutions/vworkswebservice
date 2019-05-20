@@ -16,7 +16,7 @@ namespace SimpleVWorksWebService
         {
 
 
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://localhost:8081/protocol_complete");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 
             byte[] bytes;
 
