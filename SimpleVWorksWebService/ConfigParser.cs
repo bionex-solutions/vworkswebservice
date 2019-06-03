@@ -25,6 +25,12 @@ namespace API_CONSTANTS
         public static readonly string ACCESS_CONTROL = ConfigParser.ParseINI("ENDPOINT_SETTINGS", "access_control");
     }
 
+    public class WEB_SOCKET_SETTINGS
+    {
+        public static readonly string URL = ConfigParser.ParseINI("WEB_SOCKET_SETTINGS", "url");
+        public static readonly int PORT = Int32.Parse( ConfigParser.ParseINI("WEB_SOCKET_SETTINGS", "port"));
+    }
+
     // urls to lims endpoints that will handle VWorks Events
     public class EVENT_ENDPOINTS
     {

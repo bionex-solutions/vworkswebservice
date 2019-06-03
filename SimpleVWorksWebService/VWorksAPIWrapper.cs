@@ -19,8 +19,10 @@ namespace SimpleVWorksWebService
         public VWorksAPIWrapper(VWorks4API vw)
         {
 
-            vw = new VWorks4API();
+            //vw = new VWorks4API();
+
             vw.ShowVWorks(true);
+
             vw.Login(API_CONSTANTS.VWORKS.USER_NAME, API_CONSTANTS.VWORKS.PASSWORD);
 
             vw.ProtocolComplete += ((int session, string protocol, string protocol_type) =>
@@ -28,10 +30,15 @@ namespace SimpleVWorksWebService
                 try
                 {
 
+                    if (API_CONSTANTS.EVENT_ENDPOINT_SWITCH.CLOSE_PROTOCOL)
+                    {
+                        vw.CloseProtocol(protocol);
+                    }
+
+
                     if (API_CONSTANTS.EVENT_ENDPOINT_SWITCH.PROTOCOL_COMPLETE)
                     {
                         string protocolName = Path.GetFileName(protocol);
-
                         Protocol p = new Protocol();
 
                         p.session = session;
@@ -40,16 +47,12 @@ namespace SimpleVWorksWebService
 
                         string ProtocolData = JsonConvert.SerializeObject(p);
                         Utilities.Post(ProtocolData, API_CONSTANTS.EVENT_ENDPOINTS.PROTOCOL_COMPLETE);
-
-
+                   
                     }
 
-
-                    if (API_CONSTANTS.EVENT_ENDPOINT_SWITCH.CLOSE_PROTOCOL) { 
-                        vw.CloseProtocol(protocol);
-                    }
 
                 }
+
                 catch (Exception we)
                 {
                     Console.WriteLine("Protocol Complete Event Error");
@@ -93,7 +96,9 @@ namespace SimpleVWorksWebService
 
                         string text = File.ReadAllText(p.path);
 
-                        File.WriteAllText(file_path, text);
+                       //--Inject JSON into VWorks Protocol
+
+                       File.WriteAllText(file_path, text.Replace("process_variables",  p.processVariables.ToString() ));
 
                         vw.RunProtocol(file_path, p.numTimes);
 
@@ -117,8 +122,19 @@ namespace SimpleVWorksWebService
 
                         break;
 
+                    case "hide vworks":
+
+                        vw.ShowVWorks(false);
+
+                        break;
+                    case "show vworks":
+
+                        vw.ShowVWorks(true);
+
+                        break;
+
                     default:
-                        Console.WriteLine("Invalid Method Recieved");
+                        Console.WriteLine("Invalid Method Received");
                         Console.WriteLine("Method Does Not Exist");
 
                         break;

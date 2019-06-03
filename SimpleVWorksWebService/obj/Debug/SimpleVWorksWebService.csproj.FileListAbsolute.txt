@@ -10,3 +10,4 @@ C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\Newtonsoft.Json
 C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\Newtonsoft.Json.xml
 C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\INIFileParser.dll
 C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\INIFileParser.xml
+C:\sites\SimpleVWorksWebService\SimpleVWorksWebService\bin\Debug\Ninja.WebSockets.dll

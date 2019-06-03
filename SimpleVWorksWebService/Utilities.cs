@@ -63,6 +63,7 @@ namespace SimpleVWorksWebService
         public string path { get; set; }
         public int numTimes { get; set; }
         public string run_id { get; set; }
+        public object processVariables { get; set; }
 
 
     }
