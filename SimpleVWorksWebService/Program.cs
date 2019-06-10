@@ -36,6 +36,8 @@ namespace SimpleVWorksWebService
 
             apiWrapper = new VWorksAPIWrapper(vw);
 
+            Console.WriteLine(API_CONSTANTS.ENDPOINT_SETTINGS.URL);
+
             WebServer ws = new WebServer(SendResponse, API_CONSTANTS.ENDPOINT_SETTINGS.URL);
 
 

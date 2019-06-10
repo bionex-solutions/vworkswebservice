@@ -13,6 +13,8 @@ namespace SimpleVWorksWebService
 
         public WebServer(string[] prefixes, Func<HttpListenerRequest, string> method)
         {
+
+            try { 
             if (!HttpListener.IsSupported)
                 throw new NotSupportedException(
                     "Needs Windows XP SP2, Server 2003 or later.");
@@ -31,6 +33,15 @@ namespace SimpleVWorksWebService
 
             _responderMethod = method;
             _listener.Start();
+
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace.ToString());
+
+
+
+            }
         }
 
         public WebServer(Func<HttpListenerRequest, string> method, params string[] prefixes)
