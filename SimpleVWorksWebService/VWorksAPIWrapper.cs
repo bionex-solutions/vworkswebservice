@@ -29,13 +29,14 @@ namespace SimpleVWorksWebService
             {
                 try
                 {
+                    //--Close protocol when complete
 
                     if (API_CONSTANTS.EVENT_ENDPOINT_SWITCH.CLOSE_PROTOCOL)
                     {
                         vw.CloseProtocol(protocol);
                     }
 
-
+                    //--Post to a protocol complete endpoint if turned on
                     if (API_CONSTANTS.EVENT_ENDPOINT_SWITCH.PROTOCOL_COMPLETE)
                     {
                         string protocolName = Path.GetFileName(protocol);
@@ -63,6 +64,7 @@ namespace SimpleVWorksWebService
 
             });
 
+            // --TODO: Implement other events as needed.
             /*
             vw.RecoverableError += ((int session, string device, string location, string description, out int actionToTake, out bool vworksHandlesError) =>
             {

@@ -16,7 +16,6 @@ using System.Net.WebSockets;
 using Ninja.WebSockets;
 
 
-
 namespace SimpleVWorksWebService
 {
     class Program
@@ -27,10 +26,6 @@ namespace SimpleVWorksWebService
         static IWebSocketServerFactory _webSocketServerFactory;
         static void Main(string[] args)
         {
-
-
-            File.Delete(@"C:\Windows\inf\vlm.inf");
-            File.Delete(@"C:\Windows\inf\vlm2.inf");
 
             vw = new VWorks4API();
 
